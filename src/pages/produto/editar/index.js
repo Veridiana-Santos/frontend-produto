@@ -10,7 +10,7 @@ class EditarProduto extends Component {
             produto: {
                 nome: "",
                 preco: "",
-                dataCadastro: ""
+                descricao: ""
             },
             erro: null,
             redirect: false
@@ -77,7 +77,7 @@ class EditarProduto extends Component {
                                 type="text"
                                 id="preco"
                                 name="preco"
-                                placeholder="Matrícula"
+                                placeholder="Preço"
                                 min="1"
                                 max="99999"
                                 required
@@ -86,15 +86,15 @@ class EditarProduto extends Component {
                             />
                         </div>
                         <div className="produto-update">
-                            <label htmlFor="dataCadastro">Data de Cadastro </label>
+                            <label htmlFor="descricao">Descrição </label>
                             <br />
                             <input
                                 type="text"
-                                id="dataCadastro"
-                                name="dataCadastro"
-                                placeholder="dataCadastro"
+                                id="descricao"
+                                name="descricao"
+                                placeholder="descricao"
                                 required
-                                value={this.state.produto.dataCadastro}
+                                value={this.state.produto.descricao}
                                 onChange={this.handleInputChange}
                             />
                         </div>

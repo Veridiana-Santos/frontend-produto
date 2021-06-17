@@ -9,8 +9,9 @@ class criarProduto extends Component {
         this.state = {
             produto: {
                 nome: "",
+                descricao:"",
                 preco: "",
-                dataCadastro: "",
+                estoque: "",
                 ativo: "true"
             },
             erro: null,
@@ -55,6 +56,21 @@ class criarProduto extends Component {
                             />
                         </div>
                         <div className="produto-insert">
+                            <label htmlFor="descricao">Descrição </label>
+                            <br />
+                            <input
+                                type="text"
+                                id="descricao"
+                                name="descricao"
+                                placeholder="Descrição"
+                                minLength="3"
+                                maxLength="9999"
+                                required
+                                value={this.state.produto.descricao}
+                                onChange={this.handleInputChange}
+                            />
+                        </div>
+                        <div className="produto-insert">
                             <label htmlFor="preco">Preço </label>
                             <br />
                             <input
@@ -68,15 +84,15 @@ class criarProduto extends Component {
                             />
                         </div>
                         <div className="produto-insert">
-                            <label htmlFor="dataCadastro">Data de Cadastro </label>
+                            <label htmlFor="estoque">Estoque </label>
                             <br />
                             <input
-                                type="date"
-                                id="dataCadastro"
-                                name="dataCadastro"
-                                placeholder="Data de Cadastro"
+                                type="number"
+                                id="estoque"
+                                name="estoque"
+                                placeholder="Estoque"
                                 required
-                                value={this.state.produto.dataCadastro}
+                                value={this.state.produto.estoque}
                                 onChange={this.handleInputChange}
                             />
                         </div>

@@ -31,7 +31,8 @@ export default class Produto extends Component {
                 <h1> {produto.nome} </h1>
                 <h1> {produto.ativo} </h1>
                 <h1> {produto.preco} </h1>
-                <h1> {produto.dataCadastro} </h1>
+                <h1> {produto.descricao} </h1>
+                <h1> {produto.estoque} </h1>
                 <br />
                 <Link to={`/produtos`}> Voltar </Link> <br />
                 <Link to={`/editarProduto/${produto.id}`}> Editar </Link> <br />
